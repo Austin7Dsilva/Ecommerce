@@ -12,7 +12,7 @@ const Contact = () => {
                 </div>
                 <div className="row">
                     <div className="col-md 5 d-flex justify-content-center">
-                        <img src="/assets/contact.png" alt="Contact Us" height="300px" width="300px" />
+                        <img src="https://ik.imagekit.io/ugdlmxlzt/contact.png?updatedAt=1688552996722" alt="Contact Us" height="300px" width="300px" />
                     </div>
                     <div className="col-md-6">
                         <form >

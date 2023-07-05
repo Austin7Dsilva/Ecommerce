@@ -9,8 +9,8 @@ export default function Navbar() {
       <h6 className="text-center"> NOTE : This site is not made responsive, so the mobile view of the site will be off </h6>
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm ">
         <div className="container">
-          <NavLink className="navbar-brand fw-bold fs-4" to="/">
-            Austin Collections
+          <NavLink className="navbar-brand fw-bold fs-4" aria-current="page" to="/">
+            Austin's Collections
           </NavLink>
           <button
             className="navbar-toggler"
