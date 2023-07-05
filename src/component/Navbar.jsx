@@ -7,9 +7,10 @@ export default function Navbar() {
   return (
     <div>
       <h6 className="text-center"> NOTE : This site is not made responsive, so the mobile view of the site will be off </h6>
+      <h6 className="text-center"> NOTE : Click on Austin'S Collections to begin </h6>
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm ">
         <div className="container">
-          <NavLink className="navbar-brand fw-bold fs-4 active" aria-current="page" to="/">
+          <NavLink className="navbar-brand fw-bold fs-4" aria-current="page" to="https://austin7dsilva.github.io/">
             Austin's Collections
           </NavLink>
           <button
@@ -26,7 +27,7 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <NavLink className="nav-link active active" aria-current="page" to="/">
+                <NavLink className="nav-link" aria-current="page" to="https://austin7dsilva.github.io/">
                   Home
                 </NavLink>
               </li>
