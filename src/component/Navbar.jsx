@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div>
       <h6 className="text-center"> NOTE : This site is not made responsive, so the mobile view of the site will be off </h6>
-      <h6 className="text-center"> NOTE : Click on Austin'S Collections to begin </h6>
+      <h6 className="text-center fw-bolder"> NOTE : Click on Austin'S Collections to begin </h6>
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm ">
         <div className="container">
           <NavLink className="navbar-brand fw-bold fs-4" aria-current="page" to="/">
