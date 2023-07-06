@@ -1,12 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+import $ from "jquery";
 
 export default function Navbar() {
-  const state = useSelector((state)=> state.handleCart)
+  const state = useSelector((state)=> state.handleCart);
+  function testing(){
+    if($(".navbar-collapse").hasClass("d-none"))
+    {
+      $(".navbar-collapse").removeClass("d-none");
+    }
+    else{
+      $(".navbar-collapse").addClass("d-none");
+    }
+  }
   return (
     <div>
-      <h6 className="text-center"> NOTE : This site is not made responsive, so the mobile view of the site will be off </h6>
       <h6 className="text-center fw-bolder"> NOTE : Click on Austin'S Collections to begin </h6>
       <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-sm ">
         <div className="container">
@@ -21,10 +30,11 @@ export default function Navbar() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            onClick={testing}
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <div className="navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="/">

@@ -6,3 +6,36 @@
 .login-box{
     padding: 10% 40% 0 40%;
 }
+
+@media (max-width:1024px){
+    .hero .card img{
+        height: 200px;
+    }
+    .container{
+        .card-title{
+            font-size: 1.5rem;
+        }
+        .card-text {
+            font-size: 1rem !important;
+        }
+    }
+    .card-img-overlay .container{
+        margin-top: 21%;
+    }
+    .container .buttons{
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding-bottom: 0 !important;
+        gap: 5px;
+    }
+    .contact img{
+        display: none;
+    }
+    .login-box{
+        padding: 30px;
+    }
+    .PDP img{
+        width: 200px;
+        height: 200px;
+    }
+}
