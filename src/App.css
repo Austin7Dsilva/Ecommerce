@@ -1,41 +1,51 @@
 /* Navbar */
-.navbar-nav a{
+.navbar-nav a {
     font-size: 18px;
 }
 
-.login-box{
+.login-box {
     padding: 10% 40% 0 40%;
 }
 
-@media (max-width:1024px){
-    .hero .card img{
+@media (max-width: 1024px) {
+    .hero .card img {
         height: 200px;
     }
-    .container{
-        .card-title{
+    .container {
+        .card-title {
             font-size: 1.5rem;
         }
         .card-text {
             font-size: 1rem !important;
         }
     }
-    .card-img-overlay .container{
+    .card-img-overlay .container {
         margin-top: 21%;
     }
-    .container .buttons{
+    .container .buttons {
         flex-direction: column;
         flex-wrap: wrap;
         padding-bottom: 0 !important;
         gap: 5px;
     }
-    .contact img{
+    .contact img {
         display: none;
     }
-    .login-box{
+    .login-box {
         padding: 30px;
     }
-    .PDP img{
+    .PDP img {
         width: 200px;
         height: 200px;
     }
+}
+
+.shopping-header {
+    border-bottom: 2px solid black;
+    justify-content: space-between;
+}
+
+.carItems {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
 }
