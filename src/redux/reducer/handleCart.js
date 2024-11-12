@@ -23,8 +23,6 @@ const handleCart = (state = cart, action) => {
 
         case "DELITEM":
             const exist1 = state.find((x) => x.id === product.id);
-            console.log("hi");
-
             if (exist1.qty === 1) {
                 return state.filter((x) => x.id !== product.id);
             } else {
@@ -32,6 +30,18 @@ const handleCart = (state = cart, action) => {
                     x.id === product.id ? { ...x, qty: x.qty - 1 } : x
                 );
             }
+            break;
+
+        case "INCEQTY":
+            return state.map((x) =>
+                x.id === product.id ? { ...x, qty: x.qty + 1 } : x
+            );
+            break;
+
+        case "DECEQTY":
+            return state.map((x) =>
+                x.id === product.id ? { ...x, qty: x.qty - 1 } : x
+            );
             break;
 
         default:

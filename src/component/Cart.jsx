@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CarItems from "./CarItems";
-import { delCart } from "../redux/action";
+import { delCart, incQty, decQty } from "../redux/action";
 
 function Cart() {
     const carItems = useSelector((state) => state.handleCart);
@@ -9,7 +9,7 @@ function Cart() {
     const dispatch = useDispatch();
     function calculateTotalPrice() {
         carItems.forEach((item) => {
-            priceList.push(item.price);
+            priceList.push(item.price * item.qty);
         });
     }
     if (carItems) {
@@ -21,12 +21,22 @@ function Cart() {
         dispatch(delCart(product));
     };
 
+    const incrementQuantity = (product) => {
+        dispatch(incQty(product));
+    };
+
+    const decrementQuantity = (product) => {
+        dispatch(decQty(product));
+    };
+
     return (
         <div>
             <div className="container">
                 <div className="row">
                     <div className="d-flex col shopping-header">
-                        <h1 className="text-left mt-5">Shopping Cart Items</h1>
+                        <h1 className="text-left mt-5">
+                            Shopping Cart Items[{carItems.length}]
+                        </h1>
                         <h3 className="d-flex align-items-end justify-content-between">
                             Total price : ${totalPrice}
                         </h3>
@@ -43,6 +53,9 @@ function Cart() {
                                     category={items.category}
                                     removeItem={removeItem}
                                     fullItem={items}
+                                    quantity={items.qty}
+                                    increaseQty={incrementQuantity}
+                                    decreaseQty={decrementQuantity}
                                 />
                             );
                         })}
